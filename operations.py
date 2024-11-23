@@ -21,6 +21,7 @@ def subtraction(num1, num2):
 
     # MY FUN COMMENT
 
+    # NO FUN ALLOWED
     return num1 - num2
 
 
