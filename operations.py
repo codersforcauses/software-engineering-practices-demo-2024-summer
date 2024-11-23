@@ -1,3 +1,5 @@
+import sys
+
 def addition(num1, num2):
     """
     This function will perform a addition operation on num1 by num2
@@ -6,8 +8,16 @@ def addition(num1, num2):
     Imagine that you are building a very complex function, and you want to be able to
     work with multiple people.
     """
-    # Add code here
-    pass
+    if not isinstance(num1, (int, float)) or not isinstance(num2, (int, float)):
+        raise TypeError("Both arguments must be numbers (int or float)")
+    
+    # Check for potential overflow with integers
+    if isinstance(num1, int) and isinstance(num2, int):
+        # Python's sys.maxsize could be used here
+        if num1 > 0 and num2 > 0 and num1 > sys.maxsize - num2:
+            raise OverflowError("Addition would exceed maximum integer size")
+
+    return num1 + num2
 
 
 def subtraction(num1, num2):
