@@ -24,8 +24,11 @@ def test_subtraction():
     WHEN:  passed in to the function subtraction
     THEN:  the resulting is the subtraction of the two numbers
     """
-    # assert subtraction(7, 10) == -3
-    pass
+    assert subtraction(7, 10) == -3, "Wrong, should be -3"
+    assert subtraction(10, 5) == 5, "Wrong, should be 5"
+    assert subtraction(0, 0) == 0, "Wrong, should be 0"
+    assert subtraction(1, 0) == 1, "Wrong, should be 1"
+    assert subtraction(-5, -3) == -2, "Wrong, should be -2"
 
 
 def test_multiplication():
