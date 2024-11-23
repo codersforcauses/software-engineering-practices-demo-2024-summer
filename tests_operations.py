@@ -74,6 +74,6 @@ def test_modulo():
     WHEN:  passed in to the function modulo
     THEN:  the resulting is the modulo of the two number
     """
-    assert modulo(8,9) == 0
+    assert modulo(8,2) == 0
     assert modulo(9,2) == 1
     
