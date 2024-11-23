@@ -35,7 +35,7 @@ def test_multiplication():
     WHEN:  passed in to the function multiplication
     THEN:  the resulting is the multiplication of the two numbers
     """
-    # assert multiplication(3, 5) == 15
+    assert multiplication(3, 5) == 15
     pass
 
 
